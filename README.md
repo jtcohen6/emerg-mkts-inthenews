@@ -7,7 +7,7 @@ But this is no normal README.
 ### What is this repository for? ###
 
 * PennApps XIII, Jan 16
-* [Version 0.1](www.fml.com)
+* [Version 0.1](http://www.fml.com)
 
 ### How do I get set up? ###
 
