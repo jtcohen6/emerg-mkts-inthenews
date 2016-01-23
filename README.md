@@ -11,7 +11,7 @@ But this is no normal README.
 
 ### How do I get set up? ###
 
-* Come say hi (currently 5th floor of Levine)
+* Come say hi (currently 3rd floor College Hall)
 * [Contact the site administrators](http://guswynn.github.io/)
 
 ### Contribution guidelines ###
@@ -23,4 +23,5 @@ But this is no normal README.
 
 * Raghav
 * Jeremy
+* Gus
 * Your dad
