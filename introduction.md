@@ -1,4 +1,4 @@
-# BACKGROUND #
+# Background: Emerging, Splurging, Purging #
 
 _Examining emergent market ETFs via "predictive" financial news._
 
@@ -10,4 +10,10 @@ A slow-down in the once indefatigable Chinese economy, alongside decades-low com
 
 Out of skeptical curiosity, though not cynicism, [we might consider possibilities](http://www.newyorker.com/news/john-cassidy/what-is-the-post-post-davos-model-of-the-world): the globalized economic structure is undergoing a long-term stress test (whether "debt supercyle" or "secular stagnation"); or, the globalized _financial_ structure is more liable to the momentum of well-informed investor band-wagoning.
 
-We might ask: how informed exactly?
+## How well informed? ##
+
+## Our proposed analysis ##
+
+_ETF:_ [Exchange Traded Funds](https://en.wikipedia.org/wiki/Exchange-traded_fund) are attractive for our model because:
+* Anyone can buy shares: they're low-cost, tax-effective, and therefore widely held assets
+* They
