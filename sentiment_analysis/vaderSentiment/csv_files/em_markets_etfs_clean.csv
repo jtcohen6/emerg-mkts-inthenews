@@ -1,0 +1,60 @@
+,title,ticker
+0,Chindia ,FNI
+1,Emerging Asia Pacific ,GMF
+2,Emerging Markets Small Caps ,EWX
+3,ASEAN ,ASEA
+4,Frontier Countries ,FM
+5,Emerging Europe ,GUR
+6,Gulf States ,MES
+7,"Brazil, Russia, India, China ",BIK
+8,Emerging Markets ,ADRE
+9,Beyond BRICs ,BBRC
+10,Andes ,AND
+11,Emerging Middle East & Africa ,GAF
+12,Emerging Latin America ,GML
+13,Latin America 40 ,ILF
+14,em_countries,
+15,China A-Shares ,CHNA
+16,Argentina ,ARGT
+17,Hong Kong ,EWH
+18,South Korea ,EWY
+19,Russia ,RBL
+20,Chile ,ECH
+21,China ,GXC
+22,India ,PIN
+23,Taiwan ,EWT
+24,Mexico ,EWW
+25,Malaysia ,EWM
+26,Indonesia ,IDX
+27,Thailand ,THD
+28,Singapore ,EWS
+29,Vietnam ,VNM
+30,Qatar ,QAT
+31,United Arab Emirates ,UAE
+32,Nigeria ,NGE
+33,Peru ,EPU
+34,South Africa ,EZA
+35,Turkey ,TUR
+36,Colombia ,GXG
+37,Greece ,GREK
+38,Brazil ,EWZ
+39,em_themes,
+40,China Infrastructure ,CHXX
+41,China Internet ,KWEB
+42,China Tech ,CQQQ
+43,China Consumer ,CHIQ
+44,China Infrastructure ,KFYP
+45,China Materials ,CHIM
+46,India Consumer ,INCO
+47,China Industrials ,CHII
+48,China Financials ,CHIX
+49,EM Infrastructure ,EMIF
+50,EM Consumer ,ECON
+51,India Infrastructure ,INXX
+52,China Energy ,CHIE
+53,Brazil Consumer ,BRAQ
+54,em_dividends,
+55,High Income Low Beta ,HILO
+56,Emerging Markets Small Caps ,DGS
+57,Middle East ,GULF
+58,Emerging Markets ,DEM
