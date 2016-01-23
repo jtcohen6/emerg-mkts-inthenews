@@ -7,12 +7,12 @@ import pandas
 
 
 """
-Scrape data from http://etfdb.com/etfdb-category/emerging-markets-equities/ ETF DB of emerging markets 
+Scrape data from http://etfdb.com/etfdb-category/emerging-markets-equities/ ETF DB of emerging markets
 
 """
 
 def scrape(url, df):
-	
+
 
 
 
