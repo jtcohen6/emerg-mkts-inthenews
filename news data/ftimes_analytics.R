@@ -7,13 +7,13 @@ rm(list=ls())
 dir <- "C:\\Users\\jtcohen6\\Documents\\buckfitches\\news data"
 setwd(dir)
 
-ftimes20189 <- readLines("ftimes20189.txt") # dataset
+ftimes21494 <- readLines("ftimes21494.txt") # dataset
 
 n <- 21494 # number of articles
 
-search_ftimes <- function(start,end) { ftimes20189[start:end] } # search function
+search_ftimes <- function(start,end) { ftimes21494[start:end] } # search function
 
-art_end <- grep("Document FT|Document EP|Document AI",ftimes20189) # ending line
+art_end <- grep("Document FT|Document EP|Document AI",ftimes21494) # ending line
 art_start <- c(15,art_end[-n]+1) # starting line, based on ending line
 
 ftimes_art <- function(art_num) { search_ftimes( art_start[art_num], art_end[art_num] ) }
@@ -50,13 +50,6 @@ keyword <- function(string) {
 
 View(ftimes.tbl)
 
-keyword("Russia")
-keyword("China")
-keyword("South Korea")
-keyword("oil")
-keyword("Middle East")
-keyword("Bangladesh")
-
 ftimes.tbl <- ftimes.tbl.basic # reset as needed
 
-y <- ftimes.tbl$Russia/sqrt(ftimes.tbl$WORDS)
+hist(ftimes.tbl$date)

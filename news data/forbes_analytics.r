@@ -50,11 +50,6 @@ keyword <- function(string) {
 
 View(forbes.tbl)
 
-keyword("Russia")
-keyword("China")
-keyword("South Korea")
-keyword("oil")
-keyword("Middle East")
-keyword("Bangladesh")
-
 forbes.tbl <- forbes.tbl.basic # reset as needed
+
+write.csv(forbes.tbl, "forbes.csv")
