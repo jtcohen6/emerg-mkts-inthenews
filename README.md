@@ -2,28 +2,25 @@
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
+But this is no normal README.
+
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* PennApps XIII, Jan 16
+* [Version 0.1](www.fml.com)
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Come say hi (currently 5th floor of Levine)
+* [Contact the site administrators](http://guswynn.github.io/)
 
 ### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+* Be a good person
+* Think about it first
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* Raghav
+* Jeremy
+* Your dad
