@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Emerging Markets</title>
+    <link href="../dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+
+    <script src="js/jquery.vmap.js"></script>
+    <script src="js/jquery.vmap.world.js"></script>
+    <script src="js/jquery.vmap.sampledata.js"></script>
+
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+    jQuery('#vmap').vectorMap(
+      {
+        map: 'world_en',
+        backgroundColor: '#a5bfdd',
+        borderColor: '#818181',
+        borderOpacity: 0.25,
+        borderWidth: 1,
+        color: '#f4f3f0',
+        enableZoom: true,
+        hoverColor: '#c9dfaf',
+        hoverOpacity: null,
+        normalizeFunction: 'linear',
+        scaleColors: ['#b6d6ff', '#005ace'],
+        selectedColor: '#c9dfaf',
+        selectedRegions: [],
+        showTooltip: true,
+        onRegionClick: function(element, code, region)
+        {
+            var message = 'You clicked "'
+            + region
+            + '" which has the code: '
+            + code.toUpperCase();
+
+        alert(message);
+    }
+});
+</script>
+</head>
+<body>
+<div id="vmap" style="width: 600px; height: 400px;"></div>
+</body>
+</html>

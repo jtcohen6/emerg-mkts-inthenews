@@ -48,8 +48,8 @@ keyword <- function(string) {
   names(ftimes.tbl)[new.col] <<- string
   str(ftimes.tbl) }
 
+keywords <- function(string.vec) { for (i in 1:n) { keyword(string.vec[i]) } }
+
 View(ftimes.tbl)
 
 ftimes.tbl <- ftimes.tbl.basic # reset as needed
-
-write.csv(ftimes.tbl, "ftimes.csv")
