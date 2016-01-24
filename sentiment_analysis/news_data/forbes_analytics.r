@@ -2,12 +2,12 @@
 
 ## PennApps XIII, Jeremy & Raghav (& Gus)
 
-rm(list=ls())
+#rm(list=ls())
 
 dir <- "C:\\Users\\jtcohen6\\Documents\\buckfitches\\news data"
 setwd(dir)
 
-forbes1220 <- readLines("buckfitches\\sentiment_analysis\\news data\\forbes1220.ansi.txt") # dataset
+forbes1220 <- readLines("buckfitches\\sentiment_analysis\\news_data\\forbes1220.ansi.txt") # dataset
 
 n <- 1220 # number of articles
 
@@ -50,9 +50,49 @@ keyword <- function(string) {
 
 keywords <- function(string.vec) { for (i in 1:n) { keyword(string.vec[i]) } }
 
-basic_data <- read.csv("buckfitches\\emerg_countries_basic_data.csv", stringsAsFactors = F)
-keywords(basic_data$Name)
-
 View(forbes.tbl)
 
-forbes.tbl <- forbes.tbl.basic # reset as needed
+forbes_2006 <- read.csv("buckfitches\\sentiment_analysis\\news_data\\sentiment_output\\forbes_sentiment.csv", stringsAsFactors = F)
+forbes_random <- read.csv("buckfitches\\sentiment_analysis\\news_data\\sentiment_output\\random_forbes_sentiment.csv", stringsAsFactors = F)
+basic_data <- read.csv("buckfitches\\emerg_countries_basic_data.csv", stringsAsFactors = F)
+
+# re-add dates
+dates_2006 <- forbes.tbl[forbes_2006$ART_NUM,"DATE"]
+forbes_2006$DATE <- dates_2006
+
+# initialize new operation
+findings.100 <- rep(0,times=100) # alternative temp vector
+
+# do keyword for said operation
+keyword_2006 <- function(string) {
+  for (i in 1:100) { findings.100[i] <- sum(grepl(string, forbes_art(i))) }
+  new.col <- ncol(forbes_2006)+1
+  forbes_2006[,new.col] <<- findings.100
+  names(forbes_2006)[new.col] <<- string
+  str(forbes_2006) }
+
+for (i in 1:length(basic_data$Name)) { keyword_2006(basic_data$Name[i]) }
+
+## SAME basic principle, for random vector (instead of 2006 one)
+
+# re-add dates
+dates_random <- forbes.tbl[forbes_random$ART_NUM,"DATE"]
+forbes_random$DATE <- dates_random
+
+# do keyword for said operation
+keyword_random <- function(string) {
+  for (i in 1:100) { findings.100[i] <- sum(grepl(string, forbes_art(i))) }
+  new.col <- ncol(forbes_random)+1
+  forbes_random[,new.col] <<- findings.100
+  names(forbes_random)[new.col] <<- string
+  str(forbes_random) }
+
+for (i in 1:length(basic_data$Name)) { keyword_random(basic_data$Name[i]) }
+
+str(forbes_2006)
+str(forbes_random)
+
+write.csv(forbes_2006, "buckfitches\\sentiment_analysis\\news_data\\sentiment_output\\complete\\forbes_2006_complete.csv")
+write.csv(forbes_random, "buckfitches\\sentiment_analysis\\news_data\\sentiment_output\\complete\\forbes_random_complete.csv")
+
+# forbes.tbl <- forbes.tbl.basic # reset as needed
