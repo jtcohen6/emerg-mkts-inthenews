@@ -2,10 +2,6 @@ import requests
 import nltk
 import pandas
 
-
-
-
-
 """
 Class to split each sentence into individual words
 Inspiration from: https://github.com/fjavieralba/basic_sentiment_analysis
