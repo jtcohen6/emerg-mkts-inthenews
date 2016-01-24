@@ -7,7 +7,7 @@ rm(list=ls())
 dir <- "C:\\Users\\jtcohen6\\Documents\\buckfitches\\news data"
 setwd(dir)
 
-ftimes21494 <- readLines("ftimes21494.txt") # dataset
+ftimes21494 <- readLines("buckfitches\\sentiment_analysis\\news data\\ftimes21494.txt") # dataset
 
 n <- 21494 # number of articles
 
@@ -49,6 +49,9 @@ keyword <- function(string) {
   str(ftimes.tbl) }
 
 keywords <- function(string.vec) { for (i in 1:n) { keyword(string.vec[i]) } }
+
+basic_data <- read.csv("buckfitches\\emerg_countries_basic_data.csv", stringsAsFactors = F)
+keywords(basic_data$Name)
 
 View(ftimes.tbl)
 

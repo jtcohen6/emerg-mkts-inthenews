@@ -7,7 +7,7 @@ rm(list=ls())
 dir <- "C:\\Users\\jtcohen6\\Documents\\buckfitches\\news data"
 setwd(dir)
 
-forbes1220 <- readLines("forbes1220.ansi.txt") # dataset
+forbes1220 <- readLines("buckfitches\\sentiment_analysis\\news data\\forbes1220.ansi.txt") # dataset
 
 n <- 1220 # number of articles
 
@@ -49,6 +49,9 @@ keyword <- function(string) {
   str(forbes.tbl) }
 
 keywords <- function(string.vec) { for (i in 1:n) { keyword(string.vec[i]) } }
+
+basic_data <- read.csv("buckfitches\\emerg_countries_basic_data.csv", stringsAsFactors = F)
+keywords(basic_data$Name)
 
 View(forbes.tbl)
 
