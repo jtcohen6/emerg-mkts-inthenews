@@ -5,6 +5,18 @@
 * [Next Steps](#next-steps)
 * [Acknowledgments](#acknowledge)
 
+
+## Visualization Setup
+
+Open terminal and run the following:
+```ruby
+python -m SimpleHTTPServer [LocalHost] (e.g., 8000, 5000)
+
+```
+This will render the visualization of 4 time series that compares ETFs of the chose country with the sentiment scores. 
+
+
+
 ## Background: emerging, encouraging, splurging, purging <a id="background"></a>
 
 We may not be at the biggest nerd convention after all.
