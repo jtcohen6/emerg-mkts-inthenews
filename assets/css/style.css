@@ -1,0 +1,59 @@
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#chart1{
+    width: 1000px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+#chart2{
+    width: 1000px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 50px;   
+}
+
+
+#chart3{
+    width: 1000px;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 50px;   
+}
+
+#chart4{
+    width: 1000px;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 50px;   
+}
+
+
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+.c3-axis-y .tick {
+    stroke: #c0c0c0;
+    font-size: 12px;
+}
+.c3-axis-x .tick {
+    stroke: #c0c0c0;
+    font-size: 12px;
+}
+path.domain {stroke : white;}
+.c3-legend-item text { stroke: white; 
+                    font-size: 15px;}
+
+
+
+</style>

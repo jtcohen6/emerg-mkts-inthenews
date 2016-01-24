@@ -1,77 +1,184 @@
-<html>
-  <head>
-    <link href="c3.css" rel="stylesheet" type="text/css">
-  </head>
-  <body bgcolor="#000000">
-    <div id="chart1"></div>
-    <div id="chart2"></div>
-    <div id="chart3"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sentiment Analysis on ETFs</title>
+  <link rel="stylesheet" href="assets/css/c3.css" type="text/css"/>
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+  <meta name="description" content="PennApps projects">
+  <script type="text/javascript" src="assets/js/c3.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
 
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
-    <script src="c3.js"></script>
+<div style="text-align: center"><img src="assets/css/images/welcome.png"  width = "40%"/></div>
+<body bgcolor="#000000">
+  <div id="chart1"></div>
+  <div id="chart2"></div>
+  <div id="chart3"></div>
+  <div id="chart4"></div>
     <script>
+  
 
 
-  var chart1 = c3.generate({
+  var time_series = c3.generate({
     bindto:'#chart1',
     data: {
       x: 'asOfDate',
       x_format: '%Y-%m-%d',
-      url:'blackrock/performance/ACWI.csv',
+      url:'blackrock/performance/GXC.csv',
       type: 'spline',
       hide: ['Unnamed: 0', 'drawdown'],
-      
     },
     legend: {
       hide: ['Unnamed: 0', 'drawdown'],
     },
-    onclick: function (d, i) { console.log("onclick", d, i); },
     axis: {
       x: {
         type: 'timeseries',
         tick: {
           format: '%Y-%m-%d'
         }
+      },
+      y: {
+        tick: {
+          outer: false
+        }
       }
     },
+    spline: {
+      title: 'ETF Price over Time'
+    }
 });
 
-//   var chart2 = c3.generate({
+  var time_series2 = c3.generate({
+    bindto:'#chart2',
+    data: {
+      x: 'asOfDate',
+      x_format: '%Y-%m-%d',
+      url:'blackrock/performance/GXC.csv',
+      type: 'spline',
+      hide: ['Unnamed: 0', 'drawdown'],
+    },
+    legend: {
+      hide: ['Unnamed: 0', 'drawdown'],
+    },
+    axis: {
+      x: {
+        type: 'timeseries',
+        tick: {
+          format: '%Y-%m-%d'
+        }
+      },
+      y: {
+        tick: {
+          outer: false
+        }
+      }
+    },
+    spline: {
+      title: 'ETF Price over Time'
+    }
+});
+
+  var time_series3 = c3.generate({
+    bindto:'#chart3',
+    data: {
+      x: 'asOfDate',
+      x_format: '%Y-%m-%d',
+      url:'blackrock/performance/RBL.csv',
+      type: 'spline',
+      hide: ['Unnamed: 0', 'drawdown'],
+    },
+    legend: {
+      hide: ['Unnamed: 0', 'drawdown'],
+    },
+    axis: {
+      x: {
+        type: 'timeseries',
+        tick: {
+          format: '%Y-%m-%d'
+        }
+      },
+      y: {
+        tick: {
+          outer: false
+        }
+      }
+    },
+    spline: {
+      title: 'ETF Price over Time'
+    }
+});
+
+var time_series4 = c3.generate({
+    bindto:'#chart4',
+    data: {
+      x: 'date',
+      x_format: '%Y-%m-%d',
+      url:'blackrock/performance/NEW.csv',
+      type: 'spline',
+    },
+
+    axis: {
+      x: {
+        type: 'timeseries',
+        tick: {
+          format: '%Y-%m-%d'
+        }
+      },
+      y: {
+        tick: {
+          outer: false
+        }
+      }
+    },
+    spline: {
+      title: 'ETF Price over Time'
+    }
+});
+
+
+
+
+
+// var pie_chart1 = c3.generate({
 //     bindto:'#chart2',
 //     data: {
+//       x: 'asOfDate',
+//       x_format: '%Y-%m-%d',
 //       url:'blackrock/performance/ACWI.csv',
 //       type: 'pie',
-//       hide: ['Unnamed: 0'],
-      
+//       hide: ['Unnamed: 0', 'drawdown'],
 //     },
 //     legend: {
-//       hide: ['Unnamed: 0'],
+//       hide: ['Unnamed: 0', 'drawdown'],
+//     },
+//     tooltip: {
+//       show: false
 //     }
 // });
 
-  var chart3 = c3.generate({
+  var sentiment = c3.generate({
     bindto:'#chart3',
     data: {
-      url:'blackrock/performance/ACWI.csv',
-      type: 'bar',
-      hide: ['Unnamed: 0'],
-      
+      x: 'DATE',
+      url:'sentiment_analysis/news_data/sentiment_output/complete/forbes_2006_complete.csv',
+      type: 'spline',
+      hide: ['Unnamed: 0', 'ART_NUM','ART_START', 'ART_END', 'WORDS', 'Argentina', 'Bangladesh', 'Bahrain', 'Brazil', 'Bulgaria', 'Chile', 'China', 'Colombia', 'Czech Republic', 'Egypt', 'Estonia', 'Greece', 'Hungary', 'India', 'Indonesia', 'Iran', 'Israel', 'Jordan', 'Kazakhstan', 'Kenya', 'Lebanon', 'Malaysia', 'Mauritius', 'Mexico', 'Morocco', 'Malaysia.1', 'Nigeria', 'Oman', 'Pakistan', 'Peru', 'Philippines', 'Poland', 'Qatar', 'Romania', 'Russia', 'Slovakia', 'Slovenia', 'Saudi Arabia', 'South Africa', 'South Korea', 'Sri Lanka', 'Taiwan', 'Thailand', 'Tunisia', 'Turkey', 'Ukraine', 'United Arab Emirates', 'Venezuela', 'Vietnam', 'X', 'vader_score_compound', 'vader_score_pos', 'vader_score_neg','vader_score_neu',  ''],
     },
     legend: {
-      hide: ['Unnamed: 0'],
+    hide: ['Unnamed: 0', 'ART_NUM','ART_START', 'ART_END', 'WORDS', 'Argentina', 'Bangladesh', 'Bahrain', 'Brazil', 'Bulgaria', 'Chile', 'China', 'Colombia', 'Czech Republic', 'Egypt', 'Estonia', 'Greece', 'Hungary', 'India', 'Indonesia', 'Iran', 'Israel', 'Jordan', 'Kazakhstan', 'Kenya', 'Lebanon', 'Malaysia', 'Mauritius', 'Mexico', 'Morocco', 'Malaysia.1', 'Nigeria', 'Oman', 'Pakistan', 'Peru', 'Philippines', 'Poland', 'Qatar', 'Romania', 'Russia', 'Slovakia', 'Slovenia', 'Saudi Arabia', 'South Africa', 'South Korea', 'Sri Lanka', 'Taiwan', 'Thailand', 'Tunisia', 'Turkey', 'Ukraine', 'United Arab Emirates', 'Venezuela', 'Vietnam', 'X', 'vader_score_compound', 'vader_score_pos', 'vader_score_neu',  'vader_score_neg', ''],
     },
-    type: 'bar',
-    types: {
-      data1: 'spline',
-      data2: 'line',
-      data3: 'area',
-    },
-    groups: [
-            ['level','drawdown']
-        ]
 });
 
-    </script>
-  </body>
+
+
+
+
+
+
+
+</script>
+</body>
 </html>
