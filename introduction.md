@@ -1,4 +1,4 @@
-_Emergent Markets in the News:_
+_Emergent Markets in the News, 2006-2016:_
 A project in financial modeling and natural-language processing
 
 Raghav Joshi, CE'17 & Jeremy Cohen, C'17
@@ -6,6 +6,7 @@ Raghav Joshi, CE'17 & Jeremy Cohen, C'17
 * [Background](#background)
 * [Inquiry](#inquiry)
 * [Model](#model)
+* [Limitations](#limits)
 * [Next Steps](#next-steps)
 
 ## Background: emerging, encouraging, splurging, purging <a id="background"></a>
@@ -45,6 +46,12 @@ _Aladdin API:_ In addition to a clean .json request process for the need-to-know
 
 _Media outlets:_ There is a significant dearth of historical journalistic data that is available in bulk and without proprietary licensing. This may have been the most significant challenge and limitation to our project---as in the field. Manual downloading of Forbes and Financial Times, one small cache at a time, suffices for proof of concept. Looking forward, we defer to PhD candidates in Statistics and Computer Science who are working toward similar ends.
 
-_Natural Language Processing:_ Right from the start, the project required some delving into the contemporary work in sentiment analysis. Yet, lacking sufficient media evidence to properly train a neural net, while also hoping for a better algorithm than "bag of words"---made all the more difficult by the dry tone of business journalism---we were happy to discover [vaderSentiment](https://github.com/cjhutto/vaderSentiment) and [sentlex](https://github.com/bohana/sentlex). Raghav spent many sleepless hours fine-tuning a workable lexicon, and he deserves all the sleep in the world.
+_Natural Language Processing:_ Right from the start, the project required some delving into the contemporary work in sentiment analysis. Yet, lacking sufficient media evidence to properly train a neural net, while also hoping for a better algorithm than "bag of words"---made all the more difficult by the dry tone of business journalism---we were happy to discover [vaderSentiment](https://github.com/cjhutto/vaderSentiment) and [sentlex](https://github.com/bohana/sentlex). Raghav spent many sleepless hours fine-tuning a workable lexicon, and even though we could not run it across all ~25,000 articles, he deserves all the sleep in the world.
+
+## Limitations; or, it's just a weekend... <a id="limits"></a>
+
+We're not sure how many great regressions you've seen cobbled together in a few days' time---meaning ones with an R^2 above 0.5, let alone those demonstrable insights with earth-shattering implications.
+
+We are proud to have pursued an ambitious goal, one which we also believe to have genuine intellectual merit.
 
 ## Next Steps <a id="next-steps"></a>

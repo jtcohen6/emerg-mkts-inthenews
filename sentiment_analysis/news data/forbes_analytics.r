@@ -48,8 +48,8 @@ keyword <- function(string) {
   names(forbes.tbl)[new.col] <<- string
   str(forbes.tbl) }
 
+keywords <- function(string.vec) { for (i in 1:n) { keyword(string.vec[i]) } }
+
 View(forbes.tbl)
 
 forbes.tbl <- forbes.tbl.basic # reset as needed
-
-write.csv(forbes.tbl, "forbes.csv")
