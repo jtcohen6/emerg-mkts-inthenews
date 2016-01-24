@@ -1,3 +1,0 @@
-,ART_NUM,ART_START,ART_END,WORDS,vader_score_neg,vader_score_neu,vader_score_pos,vader_score_compound
-0,1,15,78,799,0.047,0.913,0.041,-0.8149
-1,2,79,130,498,0.059,0.833,0.108,0.9824
