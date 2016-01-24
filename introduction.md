@@ -14,6 +14,10 @@ Out of skeptical curiosity, though not cynicism, [we might consider possibilitie
 
 ## Our proposed analysis ##
 
-_ETF:_ [Exchange Traded Funds](https://en.wikipedia.org/wiki/Exchange-traded_fund) are attractive for our model because:
+_ETF:_ Exchange Traded Funds are attractive for our model because:
+
 * Anyone can buy shares: they're low-cost, tax-effective, and therefore widely held assets
-* They
+* Unlike mutual funds, they're traded openly on exchanges and usually reflect asset value in price
+* They invest in a representative basket of assets & bonds, while often also tracking indices
+
+So, ETFs are widely disseminated, vulnerable to conventional market forces, and representative of their target sample.
