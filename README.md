@@ -16,8 +16,8 @@ python -m SimpleHTTPServer [LocalHost] (e.g., 8000, 5000)
 This will render the visualization of 4 time series that compares ETFs of the chose country with the sentiment scores. 
 
 
-
-## Background: emerging, encouraging, splurging, purging <a id="background"></a>
+<a id="background"></a>
+## Background: emerging, encouraging, splurging, purging
 
 We may not be at the biggest nerd convention after all.
 
@@ -31,16 +31,18 @@ Out of skeptical curiosity, though not cynicism, [we might consider possibilitie
 1. The globalized economic structure is undergoing a long-term stress test (whether "debt supercyle" or "secular stagnation");
 2. The globalized _financial_ structure is more liable to the momentum of well-informed investor band-wagoning.
 
-## Inquiry: How well informed? Well informed _how?_ <a id="inquiry"></a>
+<a id="inquiry"></a>
+## Inquiry: How well informed? Well informed _how?_
 
 _"To prove that Wall Street is an early omen of movements still to come in GNP, commentators quote economic studies alleging that market downturns predicted four out of the last five recessions. That is an understatement. Wall Street indexes predicted nine out of the last five recessions! And its mistakes were beauties."_
 <div align=right>Prof. Paul Samuelson</div>
 
 Regular readers of fact-dense, short-form financial news have long benefitted from knowing more, earlier. We're interested in the broader implications: How do emerging-market countries and the international media outlets---serving as intermediary to the wealthy, investing West---inform, influence, and incentivize each other? How can financial reporting itself engender financial phenomena?
 
-## Model: Our proposed analysis <a id="model"></a>
+<a id="model"></a>
+## Model: Our proposed analysis
 
-_Emerging Market:_ An term of investment, endearment, or euphemism referring to those countries with high growth potential, often due to natural resource abundance, infrastructural development, and relative deregulation. Ranging from small polities (qua startups) to 1b-person juggernauts, also called "developing nations" on the basis of human development and GDP-per-capita indices.
+_Emerging Market:_ A term of investment, endearment, or euphemism referring to those countries with high growth potential, often due to natural resource abundance, infrastructural development, and relative deregulation. Ranging from small polities (qua startups) to 1b-person juggernauts, also called "developing nations" on the basis of human development and GDP-per-capita indices.
 
 _ETF:_ Exchange Traded Funds are attractive for our model because:
 
@@ -56,16 +58,19 @@ _Media outlets:_ There is a significant dearth of historical journalistic data t
 
 _Natural Language Processing:_ Right from the start, the project required some delving into the contemporary work in sentiment analysis. Yet, lacking sufficient media evidence to properly train a neural net, while also hoping for a better algorithm than "bag of words"---made even less workable by the dry tone of our matter of interest, business journalism---we were happy to discover [vaderSentiment](https://github.com/cjhutto/vaderSentiment) and [sentlex](https://github.com/bohana/sentlex). Raghav spent many sleepless hours fine-tuning a workable lexicon, and even though we could not run it across all ~25,000 articles, he deserves all the sleep in the world.
 
-## Limitations; or, it's just a weekend... <a id="limits"></a>
+<a id="limits"></a>
+## Limitations; or, it's just a weekend...
 
 We're not sure how many great regressions you've seen cobbled together in a few days' time---meaning ones with an R^2 above 0.5, let alone those demonstrable insights with earth-shattering implications.
 
 We are proud to have pursued an ambitious goal, one which we also believe to have genuine intellectual merit.
 
-## Next Steps <a id="next-steps"></a>
+<a id="next-steps"></a>
+## Next Steps
 
 Down the line, we hope to be able to work with better-structured data and run more involved natural language processing. The day when conducting larger-scale learning algorithms on public journalism, especially content as consistent as financial reporting, should bring with it new opportunities for research. And, of course, our visualizations could always be more intuitive and prettier.
 
-## Acknowledgments <a id="acknowledge"></a>
+<a id="acknowledge"></a>
+## Acknowledgments
 
 Our sincere thanks to vaderSentiment (Hutto, C.J. & Gilbert, E.E., 2014), sentlex, c3, the BlackRock API, and everyone who made PennApps possible!
